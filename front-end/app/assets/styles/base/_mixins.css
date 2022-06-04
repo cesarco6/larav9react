@@ -1,0 +1,27 @@
+@define-mixin atSmall {
+    @media(min-width: 530px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media(min-width: 800px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge {
+    @media(min-width: 1020px) {
+        @mixin-content;
+    }
+}
+
+/* If we do't use float then no-clearfix
+@define-mixin clearfix {
+        &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+*/

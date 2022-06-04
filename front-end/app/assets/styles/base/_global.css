@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: #335;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $btnOrange;
+}
+
+h1 {
+    background-color: aqua;
+    text-align: center;
+}

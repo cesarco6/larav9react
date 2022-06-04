@@ -1,0 +1,45 @@
+{
+  "name": "curso-react-bluuweb",
+  "version": "1.0.1",
+  "description": "Curso de react de bluuweb al 2021",
+  "main": "test.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "fs-extra": "^10.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.14",
+    "postcss-color-hexa": "^1.2.4",
+    "postcss-import": "^14.1.0",
+    "postcss-loader": "^5.0.0",
+    "postcss-message-helpers": "^2.0.0",
+    "postcss-mixins": "^7.0.2",
+    "postcss-nested": "^5.0.3",
+    "postcss-simple-vars": "^6.0.2",
+    "react-hot-loader": "^4.13.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.3"
+  }
+}
