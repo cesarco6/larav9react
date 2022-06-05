@@ -10,9 +10,18 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.7",
         "axios": "^0.25",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "postcss-import": "^14.1.0",
+        "postcss-loader": "^7.0.0",
+        "postcss-mixins": "^9.0.2",
+        "postcss-nested": "^5.0.6",
+        "postcss-simple-vars": "^6.0.3"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
     }
 }
