@@ -1,0 +1,31 @@
+.btn {
+    background-color: rgba(30, 121, 190, 0.8);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.85rem 0.75rem;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    padding: .4rem .65rem;
+    cursor: pointer;
+   
+    @mixin atMedium {
+        font-size: 1.2rem;
+        padding: .7rem .85rem;
+    }
+
+    &--orange {
+        background-color: $btnOrange;
+    }
+
+    &--large {
+        font-size: 1rem;
+        padding: .35em .5rem;
+        background-color: $btnBlue;
+        margin: 0 auto;
+
+         @mixin atSmall {
+            font-size: 1.35rem;
+            padding: 0.9rem 0.95rem;
+        }
+    }
+}

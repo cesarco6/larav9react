@@ -1,0 +1,17 @@
+.table {
+
+
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        display: block;
+        text-align: center;
+        margin: 5px auto;
+        color: $btnOrange;
+    }
+}

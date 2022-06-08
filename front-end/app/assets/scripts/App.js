@@ -1,16 +1,16 @@
 import React from 'react'
-import Eventos from './components/Eventos'
 
-import Parrafo from './components/Parrafo'
-import Variables from './components/Variables'
 
 const App = () => {
   return (
-    <div>
-        <h1>Hello World Reactive</h1>
-        <Parrafo />
-        <Variables />
-        <Eventos />
+    <div className="table wrapper">
+      <h1 className="table__title">Products Table</h1>
+      <header className="table__header">        
+        <button className="btn btn--large">Introduce</button>
+      </header>
+      <table>
+
+      </table>
     </div>
   )
 }
