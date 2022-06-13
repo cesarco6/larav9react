@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import { Link, BrowserRouter as Router } from 'react-router-dom'
 
-const endpoint = 'http://localhost:8000/api'
+const endpoint = 'http://34.71.82.57/larav9react/api/api'
 
 const ShowProducts = () => {
     const [ products, setProducts ] = useState([])

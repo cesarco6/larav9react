@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const endpoint = 'http://localhost:8000/api/product/'
+const endpoint = 'http://34.71.82.57/larav9react/api/api/product/'
 
 const EditProducts = () => {
     const [description, setDescription] = useState('')
