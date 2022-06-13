@@ -3,9 +3,9 @@
     color: #fff;
     text-decoration: none;
     padding: 0.85rem 0.75rem;
+    margin: 1px;
     border-radius: 7px;
-    font-size: 0.95rem;
-    padding: .4rem .65rem;
+    font-size: 0.95rem;  
     cursor: pointer;
    
     @mixin atMedium {
@@ -13,19 +13,52 @@
         padding: .7rem .85rem;
     }
 
+    &--edit {
+        background-color: $btnYell;
+        color: #111;
+        width: 48%;
+        font-size: 0.5rem;
+        
+        @mixin atMedium {
+            width: 20%;
+            font-size: 1rem;
+        }
+    }
+    &--delete {
+        background-color: $btnRed;
+        width: 50%;
+        font-size: 0.5rem;
+
+        @mixin atMedium {
+            width: 25%;
+            font-size: 1rem;
+        }
+    }
+
+    &--form {
+        background-color: #04AA6D;
+        color: white;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
     &--orange {
         background-color: $btnOrange;
     }
 
     &--large {
-        font-size: 1rem;
+        font-size: 0.85rem;
         padding: .35em .5rem;
-        background-color: $btnBlue;
+        background-color: #107A53;
         margin: 0 auto;
+        width: 25%;
+        text-align: center;
 
          @mixin atSmall {
-            font-size: 1.35rem;
-            padding: 0.9rem 0.95rem;
+            font-size: 1.25rem;
+            padding: 0.5rem 0.45rem;
         }
     }
 }

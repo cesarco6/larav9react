@@ -10,17 +10,27 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    //protected $namespace = 'App\Http\Controllers';
+
     /**
      * The path to the "home" route for your application.
      *
-     * Typically, users are redirected here after authentication.
+     * This is used by Laravel authentication to redirect users after login.
      *
      * @var string
      */
     public const HOME = '/home';
-    //protected $namespace = 'App\\Http\\Controllers';
+
     /**
-     * Define your route model bindings, pattern filters, and other route configuration.
+     * The controller namespace for the application.
+     *
+     * When present, controller route declarations will automatically be prefixed with this namespace.
+     *
+     * @var string|null
+     */
+
+    /**
+     * Define your route model bindings, pattern filters, etc.
      *
      * @return void
      */
@@ -29,35 +39,16 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-            Route::middleware('api')
-                //->namespace($this->namespace)
-                ->prefix('api')
+            Route::prefix('api')
+                ->middleware('api')
+                // ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')
-                //->namespace($this->namespace)
+                // ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
-
     }
-/*
-    public function map() {
-        $this->mapApiRoutes();
-        $this->mapWebRoutes();
-    }
-
-    protected function mapApiRoutes() {
-        Route::middleware('api')
-            ->namespace($this->namespace)
-            ->prefix('api')
-            ->group(base_path('routes/api.php'));
-    }
-    protected function mapWebRoutes() {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/web.php'));
-    }
-*/
 
     /**
      * Configure the rate limiters for the application.
@@ -71,3 +62,6 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 }
+
+
+

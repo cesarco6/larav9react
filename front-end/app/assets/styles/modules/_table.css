@@ -1,6 +1,23 @@
 .table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
 
+    th {        
+      border: 1px solid #dddddd;
+        text-align: center;
+        padding: 5px;
+      }
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;        
+      }
 
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
 
     &__header {
         display: flex;
@@ -13,5 +30,26 @@
         text-align: center;
         margin: 5px auto;
         color: $btnOrange;
+        font-size: 1.35rem;
     }
+    &__head {
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: #046DFF;
+      color: $pWhite;
+      height: 65px;
+    }
+    &__body {
+      font-size: 1.1rem;
+      
+    }
+    &--btns {
+      display: inline-flex;
+      
+      @mixin atMedium {
+      display: flex;
+      justify-content: space-evenly;
+
+      }
+    }   
 }
