@@ -67,7 +67,7 @@ if (currentTask == 'dev') {
   config.output = {
       //publicPath: "/",  //new
       path: path.resolve(__dirname,'app'),
-      filename: 'bundled.js'
+      filename: 'bundled.js',      
   }
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   config.devServer =  {
@@ -84,6 +84,7 @@ if (currentTask == 'dev') {
        historyApiFallback: {index: "index.html"}, //new
        port: 3000,
        host: '0.0.0.0'
+       
      }
   config.mode = 'development'
 }
@@ -94,8 +95,11 @@ if (currentTask == 'build') {
   config.output = {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[name].[chunkhash].js',
+      sourceMapFilename: "[name].js.map",
       path: path.resolve(__dirname, 'docs')
+     
   }
+  config.devtool = "source-map",
   config.mode = 'production'
   config.optimization = {
       splitChunks: {chunks: 'all'},
@@ -106,7 +110,8 @@ if (currentTask == 'build') {
   config.plugins.push(
                       new CleanWebpackPlugin(), 
                       new MiniCssExtract({filename: 'styles.[chunkhash].css'}),
-                      new RunAfterCompile()
+                      new webpack.SourceMapDevToolPlugin({}),
+                      new RunAfterCompile()                      
   )
 }
 
