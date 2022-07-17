@@ -71,13 +71,13 @@ if (currentTask == 'dev') {
   }
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   config.devServer =  {
-      before: function(app, server) {
-         server._watch('./app/**/*.html')
-       },  
-      contentBase: path.join(__dirname, 'app'),
-      /*static: {
+      //before: function(app, server) {
+        // server._watch('./app/**/*.html')
+       //},
+      //contentBase: path.join(__dirname, 'app'),
+      static: {
         directory: path.join(__dirname, 'app')
-      }, */
+      },
       
        liveReload: false, //new
        hot: true,

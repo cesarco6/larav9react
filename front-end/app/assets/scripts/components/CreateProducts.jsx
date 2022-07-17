@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const endpoint = 'http://localhost/frontyback/larav9react/api/public/api/product'
+const endpoint = 'http://localhost:8000/api/product'
 
 const CreateProducts = () => {
     const [description, setDescription] = useState('')
